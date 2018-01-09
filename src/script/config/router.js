@@ -18,6 +18,9 @@ angular.module('app').config(['$stateProvider', '$urlRouterProvider', function (
     }).state('register', {
         url: '/register',
         templateUrl: 'view/register.html'
+    }).state('search', {
+        url: '/search',
+        templateUrl: 'view/search.html'
     });
     $urlRouterProvider.otherwise('position-list');
 }]);
