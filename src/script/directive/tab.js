@@ -4,17 +4,16 @@ angular.module('app').directive('appTab', function () {
        replace: true,
        templateUrl: 'view/template/tab.html',
        scope: {
-           data: '='
+           data: '=',
+           cFn: '&'
        },
-       link: function () {
+       link: function (scope) {
+           scope.isActive = null;
+            scope.dClick = function (item, index) {
+                scope.cFn(item);
+                scope.isActive = index;
+            };
 
        }
-       // link: function (scope) {
-       //     scope.isActive = 0;
-       //     scope.tabActive = function (index, item) {
-       //         scope.isActive = index;
-       //         console.log(item);
-       //     }
-       // }
    }
 });

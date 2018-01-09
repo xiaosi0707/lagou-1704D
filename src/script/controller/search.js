@@ -1,17 +1,36 @@
 'use strict';
 angular.module('app').controller('Search', function ($scope, $http, $cookies, $state) {
-    $scope.arrTab = ['城市', '薪资', '公司规模'];
+    var sheetData = {};
+    $scope.tabList = [
+        {
+            id: 'city',
+            name: '城市'
+        },
+        {
+            id: 'salary',
+            name: '薪资'
+        },
+        {
+            id: 'scale',
+            name: '公司规模'
+        }
+    ];
     $http.get('https://www.easy-mock.com/mock/5a52256ad408383e0e3868d7/lagou/position-list').then(function (res) {
         $scope.positionList = res.data;
     });
     $http.get('https://www.easy-mock.com/mock/5a52256ad408383e0e3868d7/lagou/city').then(function (res) {
-       $scope.city = res.data;
+        sheetData.city = res.data;
     });
     $http.get('https://www.easy-mock.com/mock/5a52256ad408383e0e3868d7/lagou/salary').then(function (res) {
-        $scope.salary = res.data;
+        sheetData.salary = res.data;
     });
     $http.get('https://www.easy-mock.com/mock/5a52256ad408383e0e3868d7/lagou/scale').then(function (res) {
-        $scope.scale = res.data;
+        sheetData.scale = res.data;
     });
+    $scope.isShow = false;
+    $scope.cClick = function (id, name) {
+        $scope.sheetData = sheetData[id];
+        $scope.isShow = true;
+    };
 
 });

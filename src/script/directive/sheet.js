@@ -4,7 +4,11 @@ angular.module('app').directive('appSheet', function () {
        replace: true,
        templateUrl: 'view/template/sheet.html',
        scope: {
-           data: '='
+           data: '=',
+           flag: '='
+       },
+       link: function (scope) {
+           console.log(scope.flag);
        }
 
    }

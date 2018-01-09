@@ -1,11 +1,11 @@
-<div ng-controller="Search">
+<div ng-controller="Search" >
     <header class="search-bar">
         <span>取消</span>
         <input type="text" placeholder="搜索职位或公司" ng-model="name">
         <a href="">搜索</a>
     </header>
-    <app-tab data="arrTab"></app-tab>
+    <app-tab data="tabList" c-fn="cClick(id, name)"></app-tab>
     <app-list data="positionList"></app-list>
-   <app-footer></app-footer>
-    <app-sheet data="salary" ng-if="false"></app-sheet>
+    <app-footer></app-footer>
+    <app-sheet data="sheetData" flag="isShow" ng-click="isShow=false"></app-sheet>
 </div>
