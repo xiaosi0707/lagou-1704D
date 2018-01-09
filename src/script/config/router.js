@@ -1,8 +1,20 @@
 'use strict';
 angular.module('app').config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-    $stateProvider.state('example', {
-        url: '/example',
-        templateUrl: 'view/example.html'
+    $stateProvider.state('position-list', {
+        url: '/position-list',
+        templateUrl: 'view/position-list.html'
+    }).state('position-info', {
+        url: '/position-info/:id',
+        templateUrl: 'view/position-info.html'
+    }).state('company', {
+        url: '/company/:id',
+        templateUrl: 'view/company.html'
+    }).state('me', {
+        url: '/me',
+        templateUrl: 'view/me.html'
+    }).state('login', {
+        url: '/login',
+        templateUrl: 'view/login.html'
     });
-    $urlRouterProvider.otherwise('example');
+    $urlRouterProvider.otherwise('position-list');
 }]);

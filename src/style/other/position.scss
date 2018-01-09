@@ -1,0 +1,23 @@
+.company-other {
+  width: 96%;
+  margin: rem(36) auto;
+  h4 {
+    border-bottom: 1px #E8E8E8 solid;
+    padding-bottom: rem(24);
+    margin-bottom: rem(24);
+  }
+  p {
+    line-height: rem(56);
+    font-size: rem(28);
+  }
+}
+.send {
+  width: 100%;
+  height: rem(82);
+  line-height: rem(82);
+  color: white;
+  text-align: center;
+  background: #00B38A;
+  position: fixed;
+  bottom: 0;
+}

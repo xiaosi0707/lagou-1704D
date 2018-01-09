@@ -1,0 +1,17 @@
+<div>
+    <section class="list" ng-repeat="item in data" ui-sref="position-info({id: item.id})">
+        <dl>
+            <dt>
+                <img ng-src="{{ item.imageUrl }}" alt="">
+            </dt>
+            <dd>
+                <div>
+                    <h3 ng-bind="item.companyName"></h3>
+                    <span ng-bind="item.job"></span>
+                    <time ng-bind="item.date"></time>
+                    <u ng-bind="item.salaryName"></u>
+                </div>
+            </dd>
+        </dl>
+    </section>
+</div>

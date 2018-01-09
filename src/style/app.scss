@@ -1,11 +1,20 @@
-html, body {
-  height: 100%;
-  color: white;
-  text-align: center;
+@function rem($px) {
+  @return $px / 46.875 + rem;
 }
-.view,.example {
-  height: 100%;
-}
-@import "other/header";
-@import "other/body";
+@import "other/reset";
+@import "other/head";
+@import "other/positon-list";
 @import "other/footer";
+@import "other/head-bar";
+@import "other/position-info";
+@import "other/company";
+@import "other/position";
+@import "other/position-class";
+@import "other/search-bar";
+@import "other/tab";
+@import "other/sheet";
+@import "other/login";
+@import "other/register";
+@import "other/me";
+@import "other/list";
+@import "other/other";

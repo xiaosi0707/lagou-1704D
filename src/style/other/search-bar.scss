@@ -1,0 +1,22 @@
+.search-bar {
+  width: 100%;
+  height: rem(82);
+  line-height: rem(82);
+  background: #00B38A;
+  color: white;
+  span {
+    margin-left: rem(30);
+  }
+  input {
+    border: 0;
+    display: inline-block;
+    width: rem(500);
+    height: rem(56);
+    margin:0 rem(24);
+    border-radius: rem(12);
+    text-indent: rem(24);
+  }
+  a {
+    color: white;
+  }
+}

@@ -1,6 +1,6 @@
 angular.module('app').directive('appFooter', function () {
    return {
-       restrict: 'A',
+       restrict: 'EA',
        replace: true,
        templateUrl: 'view/template/footer.html'
    }

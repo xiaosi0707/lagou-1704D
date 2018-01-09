@@ -1,0 +1,15 @@
+<div class="login" ng-controller="Login">
+    <form name="form">
+        <ul>
+            <li>
+                <input type="text" placeholder="已验证手机/邮箱" name="phone" ng-model="user.phone" validator="required, phone" maxlength="11">
+            </li>
+            <li>
+                <input type="password" placeholder="密码" maxlength="18" name="password" ng-model="user.password" validator="required, password">
+            </li>
+        </ul>
+        <button class="login-btn" validation-submit="form" ng-click="submit()">登录</button>
+        <div>还没账号？</div>
+        <button class="reg-btn" ui-sref="register">注册</button>
+    </form>
+</div>

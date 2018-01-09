@@ -1,0 +1,14 @@
+.tab {
+  width: 100%;
+  height: rem(80);
+  line-height: rem(80);
+  background: #F7F7F7;
+  a {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    &.active {
+      border-bottom: 1px #00B38A solid;
+    }
+  }
+}

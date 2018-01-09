@@ -1,0 +1,16 @@
+.position-class {
+  width: 96%;
+  margin: 0 auto;
+  button {
+    border: 0;
+    padding: rem(16) rem(36);
+    background: #F5F5F5;
+    border-radius: rem(32);
+    margin: rem(16);
+    color: #00B38A;
+    &.active{
+      background: #00B38A;
+      color: white;
+    }
+  }
+}

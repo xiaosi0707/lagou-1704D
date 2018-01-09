@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,body {
+  width:100%;
+  height:100%;
+  font-size: rem(30);
+}
+a {
+  text-decoration: none;
+  color: #555555;
+}
+u {
+  font-style: normal;
+  text-decoration: none;
+}
+i {
+  font-style: normal;
+}
+mark {
+  background: none;
+  color: red;
+}
+li {
+  list-style: none;
+}
+button {
+  border: 0;
+}
+.view {
+  height: 100%;
+}

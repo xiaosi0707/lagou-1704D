@@ -1,0 +1,47 @@
+.me {
+  text-align: center;
+  section {
+    width: 90%;
+    margin: rem(56) auto;
+    text-align: center;
+    overflow: hidden;
+    img {
+      margin-top: rem(160);
+      width: rem(120);
+      height: rem(120);
+      //border-radius: 50%;
+    }
+    span {
+      margin-bottom: rem(70);
+      overflow: hidden;
+      display: inline-block;
+    }
+    p {
+      width: rem(300);
+      height: rem(180);
+      line-height: rem(180);
+      float: left;
+      background: #00B38A;
+      color: white;
+      text-align: center;
+      &:last-child {
+        float: right;
+      }
+    }
+    button {
+      display: block;
+      width: 100%;
+      height: rem(100);
+      background: #FF1800;
+      color: white;
+      text-align: center;
+    }
+  }
+  .go-login {
+    width:90%;
+    height: rem(82);
+    margin: 50% auto;
+    color: white;
+    background: #00B38A;
+  }
+}

@@ -1,0 +1,36 @@
+.sheet {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background: rgba(0,0,0,.2);
+  bottom:0;
+  ul {
+    width: 96%;
+    margin-left: 2%;
+    border-radius: 3px;
+    overflow: hidden;
+    background: white;
+    position: absolute;
+    bottom: rem(12);
+    li {
+      list-style: none;
+      width: 90%;
+      margin: 0 auto;
+      height: rem(72);
+      line-height: rem(72);
+      text-align: center;
+      border-bottom: 1px  #f7f7f7 solid;
+    }
+    a {
+      display: inline-block;
+      width: 90%;
+      margin: 0 auto;
+      height: rem(72);
+      line-height: rem(72);
+      text-align: center;
+      border-bottom: 1px  #f7f7f7 solid;
+    }
+  }
+}

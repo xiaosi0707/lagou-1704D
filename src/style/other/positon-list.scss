@@ -1,0 +1,60 @@
+.list {
+  width: 100%;
+  height: rem(166);
+  border-top: 1px #EEEEEE solid ;
+  padding-top: rem(32);
+  margin-top: rem(32);
+  dl {
+    width: 90%;
+    margin: 0 auto;
+
+
+    overflow: hidden;
+    dt {
+      img {
+        width: rem(160);
+        height: rem(160);
+        border: 1px #ccc solid;
+        float: left;
+      }
+    }
+    dd {
+      width: rem(480);
+      float: right;
+      position: relative;
+      div {
+        width: 100%;
+        overflow: hidden;
+        float: left;
+        position: relative;
+        span {
+          display: block;
+          margin-top: rem(12);
+        }
+        time {
+          display: block;
+          color: #ccc;
+          margin-top: rem(12);
+        }
+        u {
+          color: #00B38A;
+          position: absolute;
+          right: 10px;
+          top:rem(60);
+        }
+        .icon {
+          img {
+            width: rem(50);
+            position: absolute;
+            top:0;
+            right: rem(24);
+          }
+        }
+      }
+
+    }
+  }
+  &:last-child{
+    margin-bottom: rem(120);
+  }
+}

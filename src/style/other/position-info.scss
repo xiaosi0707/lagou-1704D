@@ -1,0 +1,24 @@
+.position-info {
+  dl {
+    width: 96%;
+    margin: 0 auto;
+    border-bottom: 1px #E8E8E8 solid;
+    overflow: hidden;
+    padding: rem(24) 0;
+    dt {
+      width: 90%;
+      float: left;
+      p {
+        line-height: rem(50);
+      }
+    }
+    dd {
+      float: right;
+      margin-top: rem(52);
+      img {
+        width: rem(50);
+        height: rem(50);
+      }
+    }
+  }
+}

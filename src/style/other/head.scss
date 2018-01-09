@@ -1,0 +1,27 @@
+.head {
+  width: 100%;
+  height: rem(82);
+  line-height: rem(82);
+  color: white;
+  text-align: center;
+  background: #00B38A;
+}
+.head-sub{
+  width: 90%;
+  height: rem(80);
+  margin: rem(24) auto;
+  span {
+    float: left;
+    color: #555555;
+    font-size: rem(26);
+    margin-top: rem(12);
+  }
+  a {
+     display: inline-block;
+      border-radius: rem(20);
+      background: #F5F5F5;
+      color: #00B38A;
+      padding: rem(12) rem(32);
+      float: right;
+  }
+}
