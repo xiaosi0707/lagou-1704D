@@ -1,6 +1,11 @@
 'use strict';
-angular.module('app').controller('Me', function ($scope, $http) {
-    $http.get('https://www.easy-mock.com/mock/5a52256ad408383e0e3868d7/lagou/position-list').then(function (res) {
-        $scope.positionList = res.data;
-    });
+angular.module('app').controller('Me', function ($scope, $http, $cookies, $state) {
+    $scope.name = $cookies.get('name');
+    $scope.avatar = $cookies.get('avatar');
+    $scope.logout = function () {
+        $cookies.remove('id');
+        $cookies.remove('name');
+        $cookies.remove('avatar');
+        $state.go('position-list');
+    };
 });
