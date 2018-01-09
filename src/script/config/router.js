@@ -15,6 +15,9 @@ angular.module('app').config(['$stateProvider', '$urlRouterProvider', function (
     }).state('login', {
         url: '/login',
         templateUrl: 'view/login.html'
+    }).state('register', {
+        url: '/register',
+        templateUrl: 'view/register.html'
     });
     $urlRouterProvider.otherwise('position-list');
 }]);

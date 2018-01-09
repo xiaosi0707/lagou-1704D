@@ -3,5 +3,6 @@
     <app-position-msg data="positionInfo"></app-position-msg>
     <app-company data="positionInfo"></app-company>
     <div class="company-other" ng-bind="positionInfo.description"></div>
-    <a href="" class="send">去登录</a>
+    <a href="" class="send" ng-if="!isLogin" ui-sref="login">去登录</a>
+    <a href="" class="send" ng-class="isSend ? 'is-send': ''"  ng-if="isLogin" ng-click="!isSend ? send() : false">{{ isSend ? '已投递' : '投个简历' }}</a>
 </div>
