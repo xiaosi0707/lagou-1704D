@@ -4,7 +4,7 @@
         <input type="text" placeholder="搜索职位或公司" ng-model="name">
         <a href="">搜索</a>
     </header>
-    <app-tab data="tabList" c-fn="cClick(id, name)"></app-tab>
+    <app-tab data="tabList" c-fn="cClick(id, name, index)"></app-tab>
     <app-list data="positionList" filter-data="filterArgs"></app-list>
     <app-footer></app-footer>
     <app-sheet data="sheetData" flag="isShow" ng-click="isShow=false" s-fn="sClick(obj)"></app-sheet>

@@ -28,13 +28,16 @@ angular.module('app').controller('Search', function ($scope, $http, $cookies, $s
         sheetData.scale = res.data;
     });
     $scope.isShow = false;
-    $scope.cClick = function (id, name) {
+    var tabIndex = 0;
+    $scope.cClick = function (id, name, index) {
         $scope.sheetData = sheetData[id];
         $scope.isShow = true;
+        tabIndex = index;
     };
 
     $scope.filterArgs = '';
     $scope.sClick = function (obj) {
         $scope.filterArgs = obj.id;
+        $scope.tabList[tabIndex].name = obj.name;
     }
 });

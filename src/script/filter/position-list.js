@@ -2,6 +2,7 @@
 
 angular.module('app').filter('filterList', function () {
     return function (obj, id) {
+        // 单项筛选
         var result = [];
         angular.forEach(obj, function (item) {
             if (item.cityId === id) {

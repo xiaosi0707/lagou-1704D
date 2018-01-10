@@ -10,6 +10,7 @@ angular.module('app').directive('appTab', function () {
        link: function (scope) {
            scope.isActive = null;
             scope.dClick = function (item, index) {
+                item.index = index;
                 scope.cFn(item);
                 scope.isActive = index;
             };
