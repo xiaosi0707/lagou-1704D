@@ -7,8 +7,8 @@
             </dt>
             <dd>
                 <div>
-                    <h3 ng-bind="item.companyName"></h3>
-                    <span ng-bind="item.job"></span>
+                    <h3>{{ item.companyName }}</h3>
+                    <span>{{ item.job }} [{{ item.cityName }}]</span>
                     <time ng-bind="item.date"></time>
                     <u ng-bind="item.salaryName"></u>
                 </div>
