@@ -21,6 +21,9 @@ angular.module('app').config(['$stateProvider', '$urlRouterProvider', function (
     }).state('search', {
         url: '/search',
         templateUrl: 'view/search.html'
+    }).state('my-post', {
+        url: '/my-post',
+        templateUrl: 'view/my-post.html'
     });
     $urlRouterProvider.otherwise('position-list');
 }]);
