@@ -33,4 +33,8 @@ angular.module('app').controller('Search', function ($scope, $http, $cookies, $s
         $scope.isShow = true;
     };
 
+    $scope.filterArgs = '';
+    $scope.sClick = function (obj) {
+        $scope.filterArgs = obj.id;
+    }
 });

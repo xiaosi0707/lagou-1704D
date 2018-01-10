@@ -1,6 +1,6 @@
 <div class="sheet" ng-show="flag">
     <ul>
-        <li ng-repeat="item in data">{{ item.name }}</li>
+        <li ng-repeat="item in data" ng-click="sheetClick(item)">{{ item.name }}</li>
         <a >取消</a>
     </ul>
 </div>

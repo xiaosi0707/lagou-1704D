@@ -6,7 +6,8 @@ angular.module('app').directive('appList', function () {
         replace: 'true',
         templateUrl: 'view/template/list.html',
         scope: {
-            data: '='
+            data: '=',
+            filterData: '='
         }
     }
 });

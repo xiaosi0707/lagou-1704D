@@ -5,10 +5,14 @@ angular.module('app').directive('appSheet', function () {
        templateUrl: 'view/template/sheet.html',
        scope: {
            data: '=',
-           flag: '='
+           flag: '=',
+           sFn: '&'
        },
        link: function (scope) {
-           console.log(scope.flag);
+           scope.sheetClick = function (dObj) {
+               scope.sFn({obj: dObj});
+           }
+
        }
 
    }
