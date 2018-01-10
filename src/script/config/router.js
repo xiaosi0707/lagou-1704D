@@ -24,6 +24,9 @@ angular.module('app').config(['$stateProvider', '$urlRouterProvider', function (
     }).state('my-post', {
         url: '/my-post',
         templateUrl: 'view/my-post.html'
+    }).state('favorite', {
+        url: '/favorite',
+        templateUrl: 'view/favorite.html'
     });
     $urlRouterProvider.otherwise('position-list');
 }]);
