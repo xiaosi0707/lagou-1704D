@@ -23,5 +23,13 @@ angular.module('app').controller('positionInfo', function ($scope, $http, $state
         $cookies.put("isSend",arrSend);
         $scope.isSend = true;
         alert('投递成功');
-    }
+    };
+
+    // $scope.aaa = () => {
+    //     alert(1);
+    // }
+    // $scope.aaa();
+
+
+
 });

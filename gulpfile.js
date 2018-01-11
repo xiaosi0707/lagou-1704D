@@ -49,6 +49,9 @@ gulp.task('sass', function () {
 // js
 gulp.task('js', function () {
    gulp.src(app.srcPath + 'script/**/*.js')
+       .pipe($.babel({
+           presets: ['es2015']
+       }))
        .pipe($.concat('index.js'))
        .pipe($.ngAnnotate())
        .pipe($.uglify())
