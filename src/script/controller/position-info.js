@@ -9,8 +9,6 @@ angular.module('app').controller('positionInfo', function ($scope, $http, $state
     });
     $scope.isSend = false;
 
-
-
     // 容错处理
     if ($cookies.get('isSend')) arrSend = $cookies.get('isSend').split(',');
 

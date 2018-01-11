@@ -40,8 +40,8 @@ gulp.task('json', function () {
 // 编译sass
 gulp.task('sass', function () {
     $.rubySass(app.srcPath + 'style/app.scss')
-        .pipe(gulp.dest(app.devPath + 'style'))
         .pipe($.cssmin())
+        .pipe(gulp.dest(app.devPath + 'style'))
         .pipe(gulp.dest(app.prodPath + 'style'))
         .pipe($.connect.reload());
 });
@@ -50,8 +50,9 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
    gulp.src(app.srcPath + 'script/**/*.js')
        .pipe($.concat('index.js'))
-       .pipe(gulp.dest(app.devPath + 'script'))
+       .pipe($.ngAnnotate())
        .pipe($.uglify())
+       .pipe(gulp.dest(app.devPath + 'script'))
        .pipe(gulp.dest(app.prodPath + 'script'))
        .pipe($.connect.reload());
 });
@@ -76,6 +77,7 @@ gulp.task('build', ['imgs', 'js', 'sass', 'lib', 'html', 'json']);
 
 gulp.task('server', ['build'], function () {
     $.connect.server({
+        host: '172.16.110.43',
         root: [app.devPath],
         livereload: true,
         port: 1234
