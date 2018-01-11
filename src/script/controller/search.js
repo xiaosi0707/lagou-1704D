@@ -1,5 +1,6 @@
 'use strict';
 angular.module('app').controller('Search', function ($scope, $http, $cookies, $state) {
+
     var sheetData = {};
     $scope.tabList = [
         {
@@ -17,6 +18,7 @@ angular.module('app').controller('Search', function ($scope, $http, $cookies, $s
     ];
     $http.get('https://www.easy-mock.com/mock/5a52256ad408383e0e3868d7/lagou/position-list').then(function (res) {
         $scope.positionList = res.data;
+
     });
     $http.get('https://www.easy-mock.com/mock/5a52256ad408383e0e3868d7/lagou/city').then(function (res) {
         sheetData.city = res.data;
