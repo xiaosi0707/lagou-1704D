@@ -1,23 +1,39 @@
 'use strict';
 
 angular.module('app').filter('filterList', function () {
-    return function (obj, id) {
-        // 单项筛选
+    return function (list, obj) {
+
         var result = [];
-        angular.forEach(obj, function (item) {
-            if (item.cityId === id) {
-                result.push(item);
-            }  else if (item.salaryId === id) {
-                result.push(item);
-            } else if (item.scaleId === id) {
+
+        angular.forEach(list, function (item) {
+            var flag = true;
+            for(var e in obj) {
+                if(item[e] !== obj[e]) {
+                    flag = false;
+                }
+            }
+            if (flag) {
                 result.push(item);
             }
         });
-        if (!id) {
-            return obj;
-        } else {
-            return result;
-        }
+        return result;
+
+        // 单项筛选
+        // var result = [];
+        // angular.forEach(list, function (item) {
+        //     if (item.cityId === id) {
+        //         result.push(item);
+        //     }  else if (item.salaryId === id) {
+        //         result.push(item);
+        //     } else if (item.scaleId === id) {
+        //         result.push(item);
+        //     }
+        // });
+        // if (!id) {
+        //     return list;
+        // } else {
+        //     return result;
+        // }
 
     }
 })

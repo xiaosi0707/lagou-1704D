@@ -1,6 +1,5 @@
 <div>
-
-    <section class="list" ng-repeat="item in data | filterList: filterData" ui-sref="position-info({id: item.id})">
+    <section class="list" ng-repeat="item in data | filterList: filterData track by $index" ui-sref="position-info({id: item.id})">
         <dl>
             <dt>
                 <img ng-src="{{ item.imageUrl }}" alt="">

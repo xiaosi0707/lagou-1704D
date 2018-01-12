@@ -30,16 +30,24 @@ angular.module('app').controller('Search', function ($scope, $http, $cookies, $s
         sheetData.scale = res.data;
     });
     $scope.isShow = false;
-    var tabIndex = 0;
+    var tabIndex = 0;   // 选中状态
     $scope.cClick = function (id, name, index) {
         $scope.sheetData = sheetData[id];
         $scope.isShow = true;
         tabIndex = index;
     };
 
-    $scope.filterArgs = '';
+    $scope.filterArgs = {};
     $scope.sClick = function (obj) {
-        $scope.filterArgs = obj.id;
-        $scope.tabList[tabIndex].name = obj.name;
+        // filter参数收集
+        if (obj.id){
+            $scope.filterArgs[obj.idName] = obj.id;
+        }else {
+
+            delete $scope.filterArgs[obj.idName];
+            console.log($scope.filterArgs[obj.idName]);
+        }
+
+        $scope.tabList[tabIndex].name = obj.name;   // 修改当前选中的值内容
     }
 });

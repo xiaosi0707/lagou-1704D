@@ -54,8 +54,8 @@ gulp.task('js', function () {
        }))
        .pipe($.concat('index.js'))
        .pipe($.ngAnnotate())
-       .pipe($.uglify())
        .pipe(gulp.dest(app.devPath + 'script'))
+       .pipe($.uglify())
        .pipe(gulp.dest(app.prodPath + 'script'))
        .pipe($.connect.reload());
 });
@@ -83,7 +83,7 @@ gulp.task('server', ['build'], function () {
         host: '172.16.110.43',
         root: [app.devPath],
         livereload: true,
-        port: 1234
+        port: 5678
     });
     // open('http://localhost:1234');
 
